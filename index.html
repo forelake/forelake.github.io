@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>前湖 · 倒影</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://forelake.com/favicon.ico?v=1786450409453">
+<link rel="icon" type="image/png" sizes="32x32" href="https://forelake.com/favicon-32x32.png?v=1786450409453">
+<link rel="apple-touch-icon" href="https://forelake.com/apple-touch-icon.png?v=1786450409453">
+<link rel="stylesheet" href="https://forelake.com/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Forelake Reflections">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://forelake.com">
+        <img src="https://forelake.com/images/avatar.png?v=1786450409453" class="site-logo">
+        <h1 class="site-title">前湖 · 倒影</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Forelake Reflections
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://forelake.com/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://forelake.com/post/ilvc/">
+                  <h2 class="post-title">Vibe-Coding太有意思了</h2>
+                </a>
+                <div class="post-date">
+                  2026-08-09
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://forelake.com/post/ilvc/">
+                  <div class="feature-container" style="background-image: url('https://forelake.com/post-images/ilvc.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://forelake.com/post/aiqa/">
+                  <h2 class="post-title">关于AI的一些问答</h2>
+                </a>
+                <div class="post-date">
+                  2023-03-21
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://forelake.com/post/aiqa/">
+                  <div class="feature-container" style="background-image: url('https://forelake.com/post-images/aiqa.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+<!-- ========== 增强功能：⑥图片灯箱 ⑦代码复制 ⑧阅读进度条 ========== -->
+<script>
+;(function() {
+  // ⑥ 图片灯箱：点击正文图片全屏放大
+  var postContent = document.querySelector('.post-content')
+  if (postContent) {
+    var overlay = document.createElement('div')
+    overlay.className = 'lightbox-overlay'
+    overlay.innerHTML = '<img class="lightbox-img" alt="" />'
+    document.body.appendChild(overlay)
+    var lbImg = overlay.querySelector('img')
+    postContent.querySelectorAll('img').forEach(function(img) {
+      img.style.cursor = 'zoom-in'
+      img.addEventListener('click', function(e) {
+        e.preventDefault()
+        lbImg.src = img.src
+        overlay.classList.add('active')
+        document.body.style.overflow = 'hidden'
+      })
+    })
+    var closeLb = function() {
+      overlay.classList.remove('active')
+      document.body.style.overflow = ''
+    }
+    overlay.addEventListener('click', closeLb)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.keyCode === 27) closeLb()
+    })
+  }
+
+  // ⑦ 代码复制按钮
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea')
+    ta.value = text
+    ta.style.position = 'fixed'
+    ta.style.opacity = '0'
+    document.body.appendChild(ta)
+    ta.select()
+    try { document.execCommand('copy') } catch(e) {}
+    document.body.removeChild(ta)
+  }
+  document.querySelectorAll('.post-content pre').forEach(function(pre) {
+    if (pre.querySelector('.copy-btn')) return
+    pre.style.position = 'relative'
+    var btn = document.createElement('button')
+    btn.className = 'copy-btn'
+    btn.textContent = '复制'
+    pre.appendChild(btn)
+    btn.addEventListener('click', function() {
+      var code = pre.querySelector('code')
+      var text = code ? code.textContent : pre.textContent
+      var done = function() {
+        btn.textContent = '已复制'
+        btn.classList.add('copied')
+        setTimeout(function() {
+          btn.textContent = '复制'
+          btn.classList.remove('copied')
+        }, 2000)
+      }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(done).catch(function() {
+          fallbackCopy(text); done()
+        })
+      } else {
+        fallbackCopy(text); done()
+      }
+    })
+  })
+
+  // ⑧ 阅读进度条
+  var postDetail = document.querySelector('.post-detail')
+  if (postDetail) {
+    var bar = document.createElement('div')
+    bar.className = 'reading-progress'
+    document.body.appendChild(bar)
+    var ticking = false
+    var update = function() {
+      var rect = postDetail.getBoundingClientRect()
+      var total = rect.height - window.innerHeight
+      if (total <= 0) { bar.style.width = '0%'; ticking = false; return }
+      var scrolled = -rect.top
+      var progress = Math.max(0, Math.min(1, scrolled / total))
+      bar.style.width = (progress * 100) + '%'
+      ticking = false
+    }
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(update)
+        ticking = true
+      }
+    }, { passive: true })
+    window.addEventListener('resize', update)
+    update()
+  }
+
+  // ⑨ 图片说明文字：用 img 的 title/alt 自动生成 figcaption
+  var pc9 = document.querySelector('.post-content')
+  if (pc9) {
+    pc9.querySelectorAll('img').forEach(function(img) {
+      if (img.parentElement.tagName.toLowerCase() === 'figure') return
+      var title = (img.getAttribute('title') || '').trim()
+      var alt = (img.getAttribute('alt') || '').trim()
+      var caption = title || alt
+      if (!caption) return
+      var figure = document.createElement('figure')
+      figure.className = 'img-figure'
+      img.parentNode.insertBefore(figure, img)
+      figure.appendChild(img)
+      var fc = document.createElement('figcaption')
+      fc.textContent = caption
+      figure.appendChild(fc)
+    })
+  }
+
+  // ⑩ 阅读时间统计：在 .post-date 旁追加「约 N 分钟 · N 字」
+  var pd10 = document.querySelector('.post-detail')
+  if (pd10) {
+    var c10 = pd10.querySelector('.post-content')
+    var d10 = pd10.querySelector('.post-date')
+    if (c10 && d10 && !d10.querySelector('.reading-time')) {
+      var chars = (c10.textContent || '').replace(/\s+/g, '').length
+      var mins = Math.max(1, Math.round(chars / 400))
+      var sp = document.createElement('span')
+      sp.className = 'reading-time'
+      sp.textContent = ' · 约 ' + mins + ' 分钟 · ' + chars + ' 字'
+      d10.appendChild(sp)
+    }
+  }
+
+  // ⑪ 返回顶部按钮：滚动超过 400px 淡入
+  var b11 = document.createElement('button')
+  b11.className = 'back-to-top'
+  b11.innerHTML = '&uarr;'
+  b11.setAttribute('aria-label', '返回顶部')
+  document.body.appendChild(b11)
+  b11.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+  var t11 = function() {
+    if (window.pageYOffset > 400) b11.classList.add('visible')
+    else b11.classList.remove('visible')
+  }
+  window.addEventListener('scroll', t11, { passive: true })
+  t11()
+
+  // ⑫ Gitalk 评论区主题接管（亮色 + 暗色双套，跟随系统切换）
+  // Gitalk 自带样式由 JS 动态注入，注入时机晚于 customCss，导致优先级反超。
+  // 解法：在 Gitalk 异步渲染完成后用 JS 动态注入覆盖样式（带 !important），
+  //       同时接管亮色与暗色两套，让评论区与正文配色统一。
+  var gitalkHost = document.getElementById('gitalk-container')
+  if (gitalkHost) {
+    var STYLE_ID = 'gitalk-theme-style'
+
+    // —— 亮色版（与正文 simple 主题亮版色系统一）——
+    var GITALK_LIGHT_CSS =
+      '.gt-container{color:#2c3e50!important}' +
+      '.gt-header{border-bottom-color:#e8e6e0!important}' +
+      '.gt-header-text{color:#2c3e50!important;font-family:"Noto Serif SC","Songti SC",serif!important}' +
+      '.gt-header-controls,.gt-header-controls a{color:#999488!important}' +
+      '.gt-header-controls-tip{color:#999488!important}' +
+      '.gt-comments{background:transparent!important;padding-top:0!important}' +
+      // 关键修复：覆盖 Gitalk 默认 .gt-comment-content{background:#f9f9f9}，原 Gitalk 还有 margin-left:1.25em 强推内容区右移
+      '.gt-comment-content{background-color:#fff!important;color:#3d4451!important;line-height:1.7!important;margin-left:0!important;padding:0.75em 1em!important;border:1px solid #e8e6e0!important;border-radius:0 4px 4px 0!important;box-shadow:none!important}' +
+      '.gt-comment-content:hover{box-shadow:none!important}' +
+      '.gt-comment-content a{color:#5b6c5d!important;border-bottom:1px solid rgba(91,108,93,.4)!important}' +
+      '.gt-comment-content a:hover{color:#2c3e50!important;border-bottom-color:#2c3e50!important}' +
+      '.gt-comment-admin .gt-comment-content{background-color:#fff!important;border-color:#c9c6bd!important}' +
+      // 关键修复：原 class 名 .gt-comment-textarea 错，真实是 .gt-header-textarea（Gitalk 默认 background:#f6f6f6）
+      '.gt-header-textarea,.gt-header-textarea:hover,.gt-header-textarea:focus{' +
+        'background-color:#fff!important;color:#2c3e50!important;border:1px solid #e8e6e0!important;border-radius:4px!important;box-shadow:none!important' +
+      '}' +
+      '.gt-header-textarea::placeholder{color:#b5b0a1!important}' +
+      '.gt-header-preview{background-color:#fff!important;border:1px solid #e8e6e0!important;border-radius:4px!important;color:#3d4451!important}' +
+      // 外层评论卡：透明背景，让 .gt-comment-content 的白底成为视觉
+      '.gt-comment{background:transparent!important;margin-bottom:16px!important;padding:0!important;border:none!important}' +
+      '.gt-comment-avatar{background:transparent!important;padding:0!important}' +
+      '.gt-comment-body{background:transparent!important}' +
+      '.gt-comment-header{background:transparent!important;margin:0 0 0.5em 0!important;padding:0!important}' +
+      '.gt-comment-info{color:#999488!important;font-size:13px!important;background:transparent!important}' +
+      '.gt-comment-username,.gt-comment-username a{color:#5b6c5d!important;font-weight:600!important}' +
+      '.gt-comment-username:hover,.gt-comment-username a:hover{color:#2c3e50!important}' +
+      '.gt-comment-date{color:#999488!important}' +
+      '.gt-btn{' +
+        'background-color:#f4f1ea!important;color:#5a6068!important;border:1px solid #e8e6e0!important;border-radius:4px!important;' +
+        'transition:all .25s ease!important' +
+      '}' +
+      '.gt-btn:hover{background-color:#e8e6e0!important;color:#2c3e50!important;border-color:#c9c6bd!important}' +
+      '.gt-btn-login{background-color:transparent!important}' +
+      '.gt-btn-login:hover{background-color:#f4f1ea!important}' +
+      '.gt-btn-public{background-color:#5b6c5d!important;color:#fff!important;border-color:#5b6c5d!important}' +
+      '.gt-btn-public:hover{background-color:#4a5a4d!important;border-color:#4a5a4d!important}' +
+      '.gt-btn-preview{background-color:#fff!important;color:#5a6068!important}' +
+      '.gt-btn-preview:hover{background-color:#f4f1ea!important}' +
+      '.gt-meta{color:#999488!important;border-bottom-color:#e8e6e0!important}' +
+      '.gt-meta a{color:#5b6c5d!important}' +
+      '.gt-meta a:hover{color:#2c3e50!important}' +
+      '.gt-copyright{color:#999488!important;border-top-color:#e8e6e0!important}' +
+      '.gt-emote{color:#999488!important}' +
+      '.gt-avatar img,.gt-comment-avatar img{border:1px solid #e8e6e0!important;background:#f4f1ea!important;border-radius:50%!important}' +
+      '.gt-svg svg{fill:#5a6068!important}' +
+      '.gt-counts{color:#999488!important}' +
+      'a.gt-action{color:#5b6c5d!important;border-bottom:none!important}' +
+      'a.gt-action:hover{color:#2c3e50!important}' +
+      '.gt-link{border-bottom:1px solid rgba(91,108,93,.4)!important}' +
+      '.gt-link-counts{color:#999488!important}' +
+      '.gt-ico{text-align:center!important}' +
+      '.gt-popup{background:#fff!important;border:1px solid #e8e6e0!important;border-radius:4px!important;box-shadow:0 4px 18px rgba(0,0,0,.08)!important}' +
+      '.gt-popup .gt-action{color:#5a6068!important}' +
+      '.gt-popup .gt-action.is-active{background:#f4f1ea!important;color:#2c3e50!important}' +
+      '.gt-loading{color:#999488!important}'
+
+    // —— 暗色版（与正文 simple 主题暗版色系统一）——
+    var GITALK_DARK_CSS =
+      '.gt-container{color:#c4c1b8!important}' +
+      '.gt-header{border-bottom-color:#2d3134!important}' +
+      '.gt-header-text{color:#e8e5dc!important;font-family:"Noto Serif SC","Songti SC",serif!important}' +
+      '.gt-header-controls,.gt-header-controls a{color:#999488!important}' +
+      '.gt-header-controls-tip{color:#999488!important}' +
+      '.gt-comments{background:transparent!important;padding-top:0!important}' +
+      // 关键修复：覆盖 Gitalk 默认 .gt-comment-content{background:#f9f9f9}
+      // 评论正文颜色用 #d8d5dc 比 #c4c1b8 更亮，在深色背景上可读性更好
+      '.gt-comment-content{background-color:#1f2225!important;color:#d8d5dc!important;line-height:1.7!important;margin-left:0!important;padding:0.75em 1em!important;border:1px solid #2d3134!important;border-radius:0 4px 4px 0!important;box-shadow:none!important}' +
+      '.gt-comment-content p{color:#d8d5dc!important}' +
+      '.gt-comment-content:hover{box-shadow:none!important}' +
+      '.gt-comment-content a{color:#8fa690!important}' +
+      '.gt-comment-content a:hover{color:#d8d5dc!important}' +
+      '.gt-comment-admin .gt-comment-content{background-color:#1f2225!important;border-color:#3d4245!important}' +
+      // 关键修复：原 class 名 .gt-comment-textarea 错，真实是 .gt-header-textarea
+      '.gt-header-textarea,.gt-header-textarea:hover,.gt-header-textarea:focus{' +
+        'background-color:#1f2225!important;color:#e8e5dc!important;border:1px solid #2d3134!important;border-radius:4px!important;box-shadow:none!important' +
+      '}' +
+      '.gt-header-textarea::placeholder{color:#7a7669!important}' +
+      '.gt-header-preview{background-color:#1f2225!important;border:1px solid #2d3134!important;border-radius:4px!important;color:#d8d5dc!important}' +
+      // 外层评论卡：透明，让 .gt-comment-content 的深色成为视觉
+      '.gt-comment{background:transparent!important;margin-bottom:16px!important;padding:0!important;border:none!important}' +
+      '.gt-comment-avatar{background:transparent!important;padding:0!important}' +
+      '.gt-comment-body{background:transparent!important}' +
+      '.gt-comment-header{background:transparent!important;margin:0 0 0.5em 0!important;padding:0!important}' +
+      '.gt-comment-info{color:#999488!important;font-size:13px!important;background:transparent!important}' +
+      '.gt-comment-username,.gt-comment-username a{color:#8fa690!important;font-weight:600!important}' +
+      '.gt-comment-username:hover,.gt-comment-username a:hover{color:#a8c4a9!important}' +
+      '.gt-comment-date{color:#999488!important}' +
+      '.gt-btn{' +
+        'background-color:#25282b!important;color:#d8d5dc!important;border:1px solid #2d3134!important;border-radius:4px!important;' +
+        'transition:all .25s ease!important' +
+      '}' +
+      '.gt-btn:hover{background-color:#3d4245!important;color:#e8e5dc!important;border-color:#4a4f52!important}' +
+      '.gt-btn-login{background-color:transparent!important}' +
+      '.gt-btn-login:hover{background-color:#25282b!important}' +
+      '.gt-btn-public{background-color:#5b6c5d!important;color:#fff!important;border-color:#5b6c5d!important}' +
+      '.gt-btn-public:hover{background-color:#8fa690!important;color:#1a1d1f!important;border-color:#8fa690!important}' +
+      '.gt-btn-preview{background-color:#1f2225!important;color:#c4c1b8!important}' +
+      '.gt-btn-preview:hover{background-color:#25282b!important;color:#d8d5dc!important}' +
+      '.gt-meta{color:#999488!important;border-bottom-color:#2d3134!important}' +
+      '.gt-meta a{color:#8fa690!important}' +
+      '.gt-meta a:hover{color:#d8d5cc!important}' +
+      '.gt-copyright{color:#999488!important;border-top-color:#2d3134!important}' +
+      '.gt-emote{color:#999488!important}' +
+      '.gt-avatar img,.gt-comment-avatar img{border:1px solid #2d3134!important;background:#25282b!important;border-radius:50%!important}' +
+      '.gt-svg svg{fill:#c4c1b8!important}' +
+      '.gt-counts{color:#999488!important}' +
+      'a.gt-action{color:#8fa690!important;border-bottom:none!important}' +
+      'a.gt-action:hover{color:#d8d5cc!important}' +
+      '.gt-link{border-bottom:1px solid rgba(143,166,144,.4)!important}' +
+      '.gt-link-counts{color:#999488!important}' +
+      '.gt-ico{text-align:center!important}' +
+      '.gt-popup{background:#1f2225!important;border:1px solid #2d3134!important;border-radius:4px!important;box-shadow:0 4px 18px rgba(0,0,0,.3)!important}' +
+      '.gt-popup .gt-action{color:#a8a49a!important}' +
+      '.gt-popup .gt-action.is-active{background:#25282b!important;color:#e8e5dc!important}' +
+      '.gt-loading{color:#999488!important}'
+
+    var applyGitalkTheme = function() {
+      var old = document.getElementById(STYLE_ID)
+      if (old && old.parentNode) old.parentNode.removeChild(old)
+      var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      var s = document.createElement('style')
+      s.id = STYLE_ID
+      s.textContent = isDark ? GITALK_DARK_CSS : GITALK_LIGHT_CSS
+      // 关键：注入到 body 末尾而不是 head 末尾 —— body 末尾的 <style>
+      // 在 DOM 顺序上比 Gitalk 内嵌样式更后，CSS 优先级更高（specificity 相同时）
+      document.body.appendChild(s)
+      // 第二层保底：直接用 setProperty + 'important' 给关键元素设 inline style
+      // 这是 JS 端能拿到的最高优先级，inline style 1000 + !important = 胜出任何 CSS 规则
+      // 即使 Gitalk 后续再动态注入新 style 或修改元素 class，也覆盖不回去
+      var bg     = isDark ? '#1f2225' : '#fff'
+      var border = isDark ? '#2d3134' : '#e8e6e0'
+      var text   = isDark ? '#c4c1b8' : '#3d4451'
+      var input  = isDark ? '#e8e5dc' : '#2c3e50'
+      var set = function(el, props) {
+        Object.keys(props).forEach(function(k) {
+          el.style.setProperty(k, props[k], 'important')
+        })
+      }
+      document.querySelectorAll('.gt-comment-content').forEach(function(el) {
+        set(el, { 'background-color': bg, color: text, 'border-color': border })
+      })
+      document.querySelectorAll('.gt-header-textarea').forEach(function(el) {
+        set(el, { 'background-color': bg, color: input, 'border-color': border })
+      })
+      document.querySelectorAll('.gt-header-preview').forEach(function(el) {
+        set(el, { 'background-color': bg, color: text, 'border-color': border })
+      })
+    }
+    // 系统主题切换：立即重新应用（同时改 CSS 和 inline style）
+    var mq = window.matchMedia('(prefers-color-scheme: dark)')
+    if (mq.addEventListener) mq.addEventListener('change', applyGitalkTheme)
+    else if (mq.addListener) mq.addListener(applyGitalkTheme)
+    // 第三层保底：Gitalk 异步加载，评论是 GitHub API 返回后才插入到 DOM
+    // 用 MutationObserver 持续监控直到稳定
+    var mo = new MutationObserver(applyGitalkTheme)
+    mo.observe(gitalkHost, { childList: true, subtree: true })
+    // 5 秒内每 500ms 重试一次（10 次），捕获 Gitalk 后续异步插入的新节点
+    var n = 0
+    var ti = setInterval(function() {
+      n++
+      if (n >= 10) { clearInterval(ti); mo.disconnect(); return }
+      applyGitalkTheme()
+    }, 500)
+  }
+})()
+</script>
+
+
+  </body>
+</html>
